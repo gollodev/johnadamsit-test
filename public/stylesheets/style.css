@@ -1,8 +1,111 @@
 body {
-  padding: 50px;
+  padding: 10px;
+  width: auto;
+  height: auto;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #e5e5e5;
 }
 
-a {
-  color: #00B7FF;
+@media (min-width: 2560px) {
+  body {
+    padding: 20em;
+  }
+}
+
+@media (min-width: 1440px) {
+  body {
+    padding: 100px;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5rem;
+}
+
+header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+header .welcome-user {
+  color: #1135A7;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: normal;
+}
+
+header .welcome-user h1 {
+  margin: 0.3em 0;
+}
+
+header .info-user {
+  display: flex;
+  align-items: center;
+  width: 10%;
+  justify-content: space-around;
+}
+
+header .info-user .avatar-user img {
+  border-radius: 100%;
+  border-style: solid;
+  border-color:#1135A7;
+  border-width: 2px;
+}
+
+header .info-user .notifications i {
+  font-size: 1.2rem;
+  color: #1135A7;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  header {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  header .info-user .notifications i {
+    display: none;
+  }
+
+  header .welcome-user {
+    font-size: .60em;
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  header .info-user .avatar-user img {
+    width: 70px;
+    height: 70px
+  }
+
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  header .info-user {
+    width: 15%;
+  }
+}
+
+.info-companies {
+  width: 100%;
+}
+
+.info-companies .box-one, .box-two {
+  display: flex;
+}
+
+.info-companies .order-history {
+  width: 100%;
+  height: auto;
+  padding: 1rem;
+}
+
+.info-companies .order-history, .transaction-method {
+  background-color: #1135A7;
+  color: #ffffff;
+  border-radius: 5px;
 }
